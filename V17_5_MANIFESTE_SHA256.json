@@ -1,0 +1,34 @@
+{
+  "titre": "V17.5 — Manifeste SHA-256",
+  "note": "Empreintes des cinq fichiers V17.5 originaux, verifies conformes aux SHA inscrits dans le journal V17.5 (pour les quatre premiers). Les fichiers originaux n ont pas ete regeneres ni modifies. Le manifeste ne contient pas sa propre empreinte (auto-reference impossible) ; son SHA est a verifier apres telechargement.",
+  "fichiers": {
+    "V17_5_SCRIPT.py": {
+      "sha256": "24bd11260ed1f0b96cf71d02763e542f6cf44f8736aa5c4ffc8b646bc31cfec2",
+      "taille_octets": 20715
+    },
+    "V17_5_THEOREME_NON_CONFINEMENT.txt": {
+      "sha256": "2e03f3989c54893fdf0c8b7dce371629f823d1a992f380945816dc1b3a3577d5",
+      "taille_octets": 4702
+    },
+    "V17_5_CERTIFICAT_MINEUR.txt": {
+      "sha256": "67025da155d06da43c00f722a7097ce696d3a6c16b54e7edb9254c2ef1909933",
+      "taille_octets": 2508
+    },
+    "V17_5_RAPPORT.json": {
+      "sha256": "3a843bb6c44a9a7e369ced727cb1432433836af2725057e3381c882e956f13d0",
+      "taille_octets": 9774
+    },
+    "V17_5_JOURNAL.txt": {
+      "sha256": "1d849e09ef8c3239f61bfcb9aed107cffae928685937aa1689912bd324c403af",
+      "taille_octets": 2357
+    }
+  },
+  "verification": {
+    "les_4_premiers_conformes_au_journal_V17_5": true,
+    "journal_lui_meme": "SHA actuel enregistre ci-dessus, sans enregistrement anterieur a comparer (le journal etait en cours d ecriture lors de sa redaction)."
+  },
+  "sources": {
+    "V16_1_MATRICES_REDUITES.pkl": "43f620d47a1535d5a474a67add1e269c079942873d6f7f1ef71108c57bf80d07",
+    "V16_1_RAPPORT.json": "76adc689c2764512d4e58e7c47b423ebdfc81329d58a8cb03a6e734f66152154"
+  }
+}
