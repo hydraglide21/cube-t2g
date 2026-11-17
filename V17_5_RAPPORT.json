@@ -1,0 +1,296 @@
+{
+  "titre": "V17.5 — Theoreme de non-confinement dynamique du modele reduit",
+  "methode": "Arithmetique rationnelle exacte (SymPy). A = M^-1 K par resolution exacte M X = K. O = empilement des blocs (A^m)_LN, m = 0..12 (39x10). Mineur 10x10 par lignes pivots du RREF de O^T. Cayley-Hamilton verifie par Horner. Aucun calcul numerique V17.1-V17.3 refait.",
+  "sources_sha256": {
+    "V16_1_MATRICES_REDUITES.pkl": "43f620d47a1535d5a474a67add1e269c079942873d6f7f1ef71108c57bf80d07",
+    "V16_1_RAPPORT.json": "76adc689c2764512d4e58e7c47b423ebdfc81329d58a8cb03a6e734f66152154",
+    "V17_4_SCRIPT.py": "6025fa5bfe829026819d47abb49cdd6d73a3abddf93907544233eac8567912fc",
+    "V17_4_CERTIFICAT_EXACT.txt": "565ae2eaac0f627f7c6a7f3fe316dc71683ec940adf8fdb5a08bc159e2519ec7",
+    "V17_4_RAPPORT.json": "a0eb732b1b8d1ac047b25a237e2fdab95d1cb429613f88649c3ee3e6955494d7"
+  },
+  "sources_attendues": {
+    "V16_1_MATRICES_REDUITES.pkl": "43f620d47a1535d5a474a67add1e269c079942873d6f7f1ef71108c57bf80d07",
+    "V16_1_RAPPORT.json": "76adc689c2764512d4e58e7c47b423ebdfc81329d58a8cb03a6e734f66152154",
+    "V17_4_SCRIPT.py": "6025fa5bfe829026819d47abb49cdd6d73a3abddf93907544233eac8567912fc",
+    "V17_4_CERTIFICAT_EXACT.txt": "565ae2eaac0f627f7c6a7f3fe316dc71683ec940adf8fdb5a08bc159e2519ec7",
+    "V17_4_RAPPORT.json": "a0eb732b1b8d1ac047b25a237e2fdab95d1cb429613f88649c3ee3e6955494d7"
+  },
+  "verification_sources": "OK",
+  "journal_V17_4": {
+    "sha256_actuel": "5b69066be73aaa320ba9653789f20596fc501af6f14e81970afaeeb4ef962817",
+    "manifeste_anterieur": "AUCUN (pas de manifeste V17.4) — SHA enregistre a titre de tracabilite, non contre-verifie contre un enregistrement prealable",
+    "sha_inscrits_dans_journal_egaux_actuels": {
+      "V17_4_SCRIPT.py": true,
+      "V17_4_CERTIFICAT_EXACT.txt": true,
+      "V17_4_RAPPORT.json": true
+    }
+  },
+  "definitions": {
+    "M": "M13 (V16.1)",
+    "K": "K0_13 + (1/2) Kd_13",
+    "A": "M^-1 K (resolution exacte)",
+    "partition": "N = indices 0..9, L = indices 10..12"
+  },
+  "controles": {
+    "M_fois_A_egale_K": true,
+    "M_symetrique_exact": true,
+    "K_symetrique_exact": true,
+    "partition_10_3": true,
+    "A_LN_identique_V17_4_JSON_txt": true,
+    "ordres_elementaires_coherents_V17_4": true
+  },
+  "observabilite": {
+    "dimensions_O": "39x10 (blocs m = 0..12 ; bloc m = 0 nul)",
+    "dimensions_O_m_1_12": "36x10 (meme rang, meme noyau)",
+    "rang_exact_O": 10,
+    "ker_O": "{0}",
+    "rang_O_m_1_12": 10,
+    "ker_O_m_1_12": "{0}"
+  },
+  "mineur": {
+    "lignes_retenues_parmi_39": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "matrice_10x10_exacte": [
+      [
+        "0",
+        "-360",
+        "-120",
+        "660",
+        "-180",
+        "-336/5",
+        "-33",
+        "-252/5",
+        "1194/5",
+        "756/5"
+      ],
+      [
+        "0",
+        "1120",
+        "1120/3",
+        "-6160/3",
+        "560",
+        "640/3",
+        "-4",
+        "208",
+        "-1400/3",
+        "-384"
+      ],
+      [
+        "0",
+        "560",
+        "560/3",
+        "-8120/3",
+        "280",
+        "104/3",
+        "-2",
+        "-40",
+        "-2968/3",
+        "-624"
+      ],
+      [
+        "-2177280",
+        "-1737504",
+        "-428256",
+        "1913520",
+        "-709632",
+        "-1026192/5",
+        "-130176/5",
+        "-635328/5",
+        "2643324/5",
+        "2059812/5"
+      ],
+      [
+        "6773760",
+        "5178880",
+        "1487360",
+        "-17467520/3",
+        "2145600",
+        "1945792/3",
+        "-63472",
+        "515520",
+        "-4123952/3",
+        "-1148880"
+      ],
+      [
+        "3386880",
+        "2559200",
+        "7840",
+        "-14887600/3",
+        "1057680",
+        "386672/3",
+        "-24428",
+        "-159984",
+        "-4531072/3",
+        "-1073328"
+      ],
+      [
+        "-7437007872",
+        "-4638013344",
+        "-959424864",
+        "4111861968",
+        "-1816744464",
+        "-2304207744/5",
+        "-24921972",
+        "-235857456",
+        "5237717808/5",
+        "4378500792/5"
+      ],
+      [
+        "22901760000",
+        "14124664960",
+        "3277052800",
+        "-38769510080/3",
+        "5588343360",
+        "4388296960/3",
+        "-95453104",
+        "911949504",
+        "-9335820032/3",
+        "-2627437088"
+      ],
+      [
+        "11267988480",
+        "6907866560",
+        "416870720",
+        "-25621694560/3",
+        "2725466400",
+        "1376138336/3",
+        "-29890136",
+        "-150116064",
+        "-6956799808/3",
+        "-1803094624"
+      ],
+      [
+        "-18474309633024",
+        "-10668859261632",
+        "-1998335749440",
+        "8292793221216",
+        "-4108529000736",
+        "-981367997568",
+        "-333418753224/5",
+        "-2150111191392/5",
+        "10290508410768/5",
+        "8896723789536/5"
+      ]
+    ],
+    "determinant_exact": "-108252777380873936258305659923321246663647119739453440000",
+    "verification": {
+      "bareiss": "-108252777380873936258305659923321246663647119739453440000",
+      "domain_ge": "-108252777380873936258305659923321246663647119739453440000",
+      "egalite": true,
+      "minor_fois_inverse_egale_I": true
+    },
+    "conclusion_rang": "det != 0 => rang(O) >= 10 ; O a 10 colonnes => rang(O) = 10, ker(O) = {0}"
+  },
+  "cayley_hamilton": {
+    "p_A_egale_0_verifie_exactement": true,
+    "consequence": "Pour m >= 13, A^m est combinaison Q-lineaire de I, A, ..., A^12."
+  },
+  "theoreme": "A r = 1/2, dans le modele lineaire reduit de dimension 13 defini par les matrices V16.1, aucune condition initiale non nulle portee par N (avec q'(0) = 0) ne reste confinee dans N pour toute l'evolution.",
+  "demonstration": {
+    "etapes": [
+      "M inversible, q'' = -A q",
+      "q^(2m)(0) = (-1)^m A^m q(0), q^(2m+1)(0) = 0",
+      "Solutions analytiques (entieres) : serie de Taylor en puissances paires",
+      "Cayley-Hamilton : A^m (m>=13) combinaison de I..A^12",
+      "O v = 0 <=> (A^m)_LN v = 0 pour tout m >= 0",
+      "ker(O) = {0} (mineur) => pour tout v != 0, il existe m dans {1,...,12} avec (A^m)_LN v != 0",
+      "Premier ordre non nul m* : q_L(t) = (-1)^m* t^(2m*)/(2m*)! (A^m*)_LN v + O(t^(2m*+2)) != 0 pour t > 0 petit"
+    ],
+    "remarque": "q_L(t) n'est pas identiquement nul ; des annulations ponctuelles ulterieures restent possibles."
+  },
+  "illustrations_exactes": {
+    "e_0": {
+      "premier_ordre": 2,
+      "coefficient_dominant": [
+        "-2177280",
+        "6773760",
+        "3386880"
+      ]
+    },
+    "v_ones": {
+      "premier_ordre": 1,
+      "coefficient_dominant": [
+        "1197/5",
+        "-1300/3",
+        "-9902/3"
+      ]
+    }
+  },
+  "comparaison_V17_3": {
+    "statut": "Validation complementaire uniquement, NON une preuve du theoreme",
+    "rappel": "V17.3 : les 10 essais elementaires activent L (E_L^max > seuil), y compris e_0 (activation differee, ordre 2). Coherent avec le theoreme."
+  },
+  "contre_verification_V17_4": {
+    "A_LN_identique": true,
+    "ordres_coherents": true,
+    "observabilite_borne_12_coherentes": true,
+    "resultats_anterieurs_modifies": false
+  },
+  "conclusions": {
+    "1_rang_exact_O": "OUI, rang exact de O = 10.",
+    "2_mineur_retenu": "Lignes [3, 4, 5, 6, 7, 8, 9, 10, 11, 12] (parmi les 39).",
+    "3_determinant_exact": "-108252777380873936258305659923321246663647119739453440000",
+    "4_cayley_hamilton_justifie_borne_12": "OUI, p(A) = 0 verifie exactement ; A^m (m>=13) combinaison de I..A^12.",
+    "5_theoreme_universel_demonte": "OUI (mineur exact + Cayley-Hamilton + Taylor).",
+    "6_limites_physiques_ouvertes": [
+      "Cube physique complet",
+      "Non-linearites",
+      "Amortissement",
+      "Autres valeurs de r",
+      "Interpretation physique de resonance ou de soliton"
+    ]
+  },
+  "separation": {
+    "demonstration_mathematique_exacte": "Theoreme + preuve (fichier theoreme) ; certificat du mineur (fichier certificat).",
+    "controles_informatiques": "SHA, M*A = K, symetrie, A_LN == V17.4, determinant par deux methodes + inverse, fichiers anterieurs inchanges.",
+    "comparaison_numerique_historique": "V17.3 rappelee comme validation complementaire, non comme preuve.",
+    "interpretation_physique": "Hors perimetre."
+  },
+  "fichiers_anterieurs_inchanges": {
+    "V16_1/V16_1_CHECKPOINT.pkl": true,
+    "V16_1/V16_1_JOURNAL.txt": true,
+    "V16_1/V16_1_MATRICES_REDUITES.pkl": true,
+    "V16_1/V16_1_MATRICES_REDUITES.txt": true,
+    "V16_1/V16_1_RAPPORT.json": true,
+    "V16_1/V16_1_SCRIPT.py": true,
+    "V16_1/V16_1_SCRIPT_1.py": true,
+    "V16_1/V16_1_SCRIPT_2.py": true,
+    "V16_1/V16_1_SCRIPT_3.py": true,
+    "V16_1/V16_1_SCRIPT_4.py": true,
+    "V17_1/V17_1_JOURNAL.txt": true,
+    "V17_1/V17_1_RAPPORT.json": true,
+    "V17_2/V17_2_JOURNAL.txt": true,
+    "V17_2/V17_2_RAPPORT.json": true,
+    "V17_3/V17_3_JOURNAL.txt": true,
+    "V17_3/V17_3_MANIFESTE_SHA256.json": true,
+    "V17_3/V17_3_RAPPORT.json": true,
+    "V17_3/V17_3_SCRIPT.py": true,
+    "V17_4/V17_4_CERTIFICAT_EXACT.txt": true,
+    "V17_4/V17_4_CERTIFICAT_EXACT_1.txt": true,
+    "V17_4/V17_4_JOURNAL.txt": true,
+    "V17_4/V17_4_JOURNAL_1.txt": true,
+    "V17_4/V17_4_RAPPORT.json": true,
+    "V17_4/V17_4_RAPPORT_1.json": true,
+    "V17_4/V17_4_SCRIPT.py": true,
+    "V17_4/V17_4_SCRIPT_1.py": true,
+    "V17_4/V17_4_SCRIPT_2.py": true,
+    "V17_4/V17_4_SCRIPT_3.py": true,
+    "V17_4/V17_4_SCRIPT_4.py": true
+  },
+  "livrables_sha256": {
+    "V17_5_SCRIPT.py": "24bd11260ed1f0b96cf71d02763e542f6cf44f8736aa5c4ffc8b646bc31cfec2",
+    "V17_5_THEOREME_NON_CONFINEMENT.txt": "2e03f3989c54893fdf0c8b7dce371629f823d1a992f380945816dc1b3a3577d5",
+    "V17_5_CERTIFICAT_MINEUR.txt": "67025da155d06da43c00f722a7097ce696d3a6c16b54e7edb9254c2ef1909933"
+  },
+  "duree_s": 0.2
+}
