@@ -1,0 +1,139 @@
+V17.5 — JOURNAL RECONSTRUIT
+
+Étude du non-confinement dynamique — modèle réduit du cube
+
+Statut : reconstruction documentaire à partir des éléments conservés dans les échanges et des livrables V17.5.
+
+Ce fichier n'est pas une copie certifiée du journal original. Les informations non retrouvées ne sont pas reconstituées artificiellement.
+
+1. Objet de l'étude
+
+Étudier le non-confinement dynamique dans le modèle linéaire réduit à 13 degrés de liberté, avec une partition :
+
+N : 10 degrés de liberté ;
+
+L : 3 degrés de liberté.
+
+La matrice dynamique est définie par :
+
+[
+A=M^{-1}K.
+]
+
+La matrice d'observabilité utilisée est construite en empilant les blocs :
+
+[
+O=
+\begin{pmatrix}
+(A^0){LN}\
+(A^1){LN}\
+\vdots\
+(A^{12})_{LN}
+\end{pmatrix}.
+]
+
+2. Résultats rapportés pour V17.5
+
+Les livrables V17.5 rapportent les résultats suivants :
+
+matrice d'observabilité de dimension (39\times10) ;
+
+rang exact annoncé : 10 ;
+
+noyau annoncé : réduit au vecteur nul ;
+
+mineur carré d'ordre 10 extrait sur les lignes :
+
+[
+[3,4,5,6,7,8,9,10,11,12]
+]
+
+déterminant exact annoncé :
+
+[
+-108252777380873936258305659923321246663647119739453440000.
+]
+
+Deux méthodes de calcul du déterminant sont rapportées : Bareiss et calcul sur domaine exact. Leur égalité est annoncée. L'inverse du mineur et le rang 10 sont également rapportés comme vérifiés.
+
+Une vérification exacte de Cayley-Hamilton est également mentionnée dans le rapport V17.5.
+
+Réserve : ces résultats sont rapportés par les artefacts fournis. Ils ne sont pas reproduits indépendamment dans le présent journal reconstruit.
+
+3. Conclusion mathématique annoncée
+
+Dans le modèle linéaire réduit considéré, à (r=1/2), pour toute condition initiale non nulle de la forme :
+
+[
+q(0)=(v,0),\qquad v\in N,
+]
+
+la composante dans L n'est pas identiquement nulle au cours du temps.
+
+Cela signifie qu'un mouvement initialement porté par N ne reste pas confiné à N pendant toute son évolution.
+
+Cette conclusion n'exclut pas des annulations ponctuelles de la composante L à certains instants.
+
+4. Limites de portée
+
+La conclusion concerne uniquement le modèle linéaire réduit de 13 degrés de liberté étudié.
+
+Les points suivants restent ouverts :
+
+extension au cube complet ;
+
+prise en compte des non-linéarités ;
+
+influence de l'amortissement ;
+
+étude pour d'autres valeurs de (r) ;
+
+interprétation physique en termes de résonance, de solitons ou de breathers.
+
+Aucune de ces extensions n'est démontrée par le seul résultat d'observabilité V17.5.
+
+5. Traçabilité des livrables
+
+Les empreintes suivantes sont celles annoncées dans le manifeste V17.5. Elles sont reproduites ici comme données rapportées, et non comme empreintes recalculées dans le cadre de cette reconstruction.
+
+Fichier
+
+SHA-256 annoncé
+
+V17_5_SCRIPT.py
+
+24bd11260ed1f0b96cf71d02763e542f6cf44f8736aa5c4ffc8b646bc31cfec2
+
+V17_5_THEOREME_NON_CONFINEMENT.txt
+
+2e03f3989c54893fdf0c8b7dce371629f823d1a992f380945816dc1b3a3577d5
+
+V17_5_CERTIFICAT_MINEUR.txt
+
+67025da155d06da43c00f722a7097ce696d3a6c16b54e7edb9254c2ef1909933
+
+V17_5_RAPPORT.json
+
+3a843bb6c44a9a7e369ced727cb1432433836af2725057e3381c882e956f13d0
+
+Le manifeste mentionne également un journal original de 2357 octets, avec une empreinte annoncée :
+
+1d849e09ef8c3239f61bfcb9aed107cffae928685937aa1689912bd324c403af
+
+Cette empreinte concerne le journal original recherché. Elle ne correspond pas au présent journal reconstruit.
+
+6. Réserve technique
+
+Le rapport V17.5 utilise une résolution exacte de (MX=K) et rapporte (MA=K). Ces identités ne constituent pas, à elles seules, un certificat indépendant suffisant de l'inversibilité de M. Une vérification séparée de cette propriété reste nécessaire.
+
+7. Statut final
+
+Résultats d'observabilité : rapportés dans les livrables V17.5.
+
+Déterminant du mineur : valeur exacte rapportée.
+
+Reproduction indépendante : non effectuée ici.
+
+Journal original : non retrouvé.
+
+Présent document : reconstruction documentaire, non substituable à l'original.
