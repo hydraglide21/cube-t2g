@@ -1,0 +1,38 @@
+```
+V17.5 — CERTIFICAT DU MINEUR 10x10 DE LA MATRICE D'OBSERVABILITE O
+================================================================================
+
+Matrice d'observabilite O : 39x10, blocs (A^m)_LN, m = 0..12.
+Le bloc m = 0 est la matrice nulle (I_LN = 0) ; la version 36x10 (m = 1..12) a meme rang et meme noyau.
+
+Lignes retenues (parmi les 39 ; ligne = 3*m + j, m = ordre, j = 0..2 composante L) :
+  [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Selection : lignes pivots du RREF exact de O^T (une base de lignes de O, ordre croissant).
+
+Matrice 10x10 correspondante (coefficients exacts, lignes dans l'ordre retenu) :
+  [0, -360, -120, 660, -180, -336/5, -33, -252/5, 1194/5, 756/5]
+  [0, 1120, 1120/3, -6160/3, 560, 640/3, -4, 208, -1400/3, -384]
+  [0, 560, 560/3, -8120/3, 280, 104/3, -2, -40, -2968/3, -624]
+  [-2177280, -1737504, -428256, 1913520, -709632, -1026192/5, -130176/5, -635328/5, 2643324/5, 2059812/5]
+  [6773760, 5178880, 1487360, -17467520/3, 2145600, 1945792/3, -63472, 515520, -4123952/3, -1148880]
+  [3386880, 2559200, 7840, -14887600/3, 1057680, 386672/3, -24428, -159984, -4531072/3, -1073328]
+  [-7437007872, -4638013344, -959424864, 4111861968, -1816744464, -2304207744/5, -24921972, -235857456, 5237717808/5, 4378500792/5]
+  [22901760000, 14124664960, 3277052800, -38769510080/3, 5588343360, 4388296960/3, -95453104, 911949504, -9335820032/3, -2627437088]
+  [11267988480, 6907866560, 416870720, -25621694560/3, 2725466400, 1376138336/3, -29890136, -150116064, -6956799808/3, -1803094624]
+  [-18474309633024, -10668859261632, -1998335749440, 8292793221216, -4108529000736, -981367997568, -333418753224/5, -2150111191392/5, 10290508410768/5, 8896723789536/5]
+
+Determinant rationnel exact (sans troncature) :
+  -108252777380873936258305659923321246663647119739453440000
+
+Verification independante :
+  - Methode de Bareiss : -108252777380873936258305659923321246663647119739453440000
+  - Methode domain-ge  : -108252777380873936258305659923321246663647119739453440000
+  - Egalite des deux methodes : True
+  - minor * minor^-1 == I_10 : True
+  - Le determinant est non nul, donc les 10 lignes sont independantes : rang(O) >= 10.
+  - O possede 10 colonnes, donc rang(O) <= 10. Conclusion : rang(O) = 10, ker(O) = {0}.
+
+Borne 12 (Cayley-Hamilton) : p(A) = 0 verifie exactement ; pour m >= 13, A^m est combinaison
+Q-lineaire de I, A, ..., A^12. Donc O v = 0 implique (A^m)_LN v = 0 pour tout m >= 0,
+et ker(O) = {0} implique que pour tout v != 0, il existe m dans {1,...,12} avec (A^m)_LN v != 0.
+```
