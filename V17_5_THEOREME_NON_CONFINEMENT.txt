@@ -1,0 +1,75 @@
+```
+V17.5 — THEOREME DE NON-CONFINEMENT DYNAMIQUE DU MODELE REDUIT
+================================================================================
+
+ENONCE
+Soient M = M13 et K = K0_13 + (1/2) Kd_13 les matrices reduites exactes V16.1
+(13x13, rationnelles), A = M^{-1} K, partition N = {0,...,9}, L = {10,11,12}.
+
+THEOREME. A r = 1/2, dans le modele lineaire reduit M q''(t) + K q(t) = 0, pour toute
+condition initiale q(0) = (v, 0) avec v dans Q^10 non nul, et q'(0) = 0, la composante
+q_L(t) n'est pas identiquement nulle ; en particulier la trajectoire ne reste pas
+confinee dans N. Plus precisement, il existe m dans {1,...,12} tel que
+(A^m)_LN v != 0, et
+    q_L(t) = (-1)^m t^(2m)/(2m)! * (A^m)_LN v + O(t^(2m+2)).
+
+DEMONSTRATION
+1. M est inversible (resolution exacte M X = K reussie ; verification M A = K).
+   L'equation s'ecrit q'' = -A q.
+2. Par recurrence sur m : q^(2m) = (-A)^m q et q^(2m+1) = (-A)^m q'.
+   En t = 0 avec q'(0) = 0 : q^(2m)(0) = (-1)^m A^m q(0) et q^(2m+1)(0) = 0.
+3. Les solutions d'une EDO lineaire a coefficients constants sont analytiques (entieres).
+   Serie de Taylor (convergente pour tout t) :
+       q(t) = somme_{m>=0} t^(2m)/(2m)! * (-1)^m A^m q(0).
+   Projection sur L :
+       q_L(t) = somme_{m>=0} t^(2m)/(2m)! * (-1)^m (A^m)_LN v.
+   Le terme m = 0 est nul car (A^0)_LN = I_LN = 0.
+4. Cayley-Hamilton : p(A) = 0 ou p est le polynome caracteristique de A
+   (verifie exactement par evaluation de Horner, voir certificat).
+   Donc pour m >= 13, A^m est combinaison Q-lineaire de I, A, ..., A^12.
+   Par consequent : si (A^k)_LN v = 0 pour k = 0,...,12, alors (A^m)_LN v = 0 pour tout m >= 0.
+   Reciproquement : si (A^m)_LN v = 0 pour tout m >= 0, alors en particulier pour m = 0..12,
+   donc O v = 0, ou O est la matrice d'observabilite ci-dessous.
+5. O est la matrice 39x10 formee des blocs (A^m)_LN, m = 0..12 (le bloc m = 0 est nul ;
+   la version 36x10, m = 1..12, a meme rang et meme noyau).
+   Certificat de rang (voir V17_5_CERTIFICAT_MINEUR.txt) : le mineur 10x10 forme des lignes
+   [3, 4, 5, 6, 7, 8, 9, 10, 11, 12] a pour determinant
+   -108252777380873936258305659923321246663647119739453440000
+   qui est non nul. Donc rang(O) >= 10 ; comme O a 10 colonnes, rang(O) = 10, donc ker(O) = {0}.
+6. Pour v != 0, v n'est pas dans ker(O), donc il existe m dans {0,...,12} avec
+   (A^m)_LN v != 0. Le bloc m = 0 etant nul, m appartient a {1,...,12}.
+   (m = 0 est exclu de la borne finale : le bloc identite a un bloc LN nul.)
+7. Soit m* le plus petit tel m. Alors
+       q_L(t) = (-1)^m* t^(2m*)/(2m*)! * (A^m*)_LN v + O(t^(2m*+2))
+   avec un coefficient dominant non nul. Par analyticite, q_L(t) != 0 pour tout t > 0
+   suffisamment petit. Donc q_L n'est pas identiquement nulle : la trajectoire n'est pas
+   confinee dans N.  C.Q.F.D.
+
+REMARQUES
+- Le resultat vaut pour tout v dans Q^10 non nul. L'argument de rang etant independant du
+  corps de base (les matrices sont rationnelles), il vaut aussi pour v dans R^10 non nul.
+- Le theoreme n'affirme PAS que q_L(t) != 0 a tous les instants ulterieurs : des annulations
+  ponctuelles sont possibles. Il affirme la non-confinement : q_L n'est pas identiquement nulle.
+- Le theoreme porte sur les conditions initiales q(0) = (v,0), q'(0) = 0.
+  (Extension a q'(0) != 0 : hors perimetre ; elle demanderait l'observabilite complete
+  incluant les derivees impaires.)
+- Portee : exact sur Q ; dix coordonnees N, trois coordonnees L ; universel pour toute
+  combinaison non nulle de N (pas seulement les dix excitations elementaires).
+- Hors perimetre : cube physique complet, non-linearites, amortissement, autres valeurs de r,
+  interpretation physique de resonance ou de soliton.
+
+ILLUSTRATIONS EXACTES (non des preuves : le theoreme est ker O = {0} + Cayley-Hamilton)
+- e_0 (activation differee) : premier ordre m = 2, coefficient dominant (A^2)_LN e_0 = ['-2177280', '6773760', '3386880'].
+  Donc q_L(t) = t^4/24 * (A^2)_LN e_0 + O(t^6) pour la condition initiale e_0.
+- v = (1,...,1) : premier ordre m = 1, coefficient dominant = ['1197/5', '-1300/3', '-9902/3'].
+  Donc q_L(t) = (-1)^1 t^2/(2*1)! * (A^1)_LN v + O(t^4).
+
+CONTROLES INFORMATIQUES
+- SHA-256 des sources verifies avant toute operation (voir rapport JSON).
+- M A = K verifie exactement ; symetrie exacte de M et K ; partition 10+3 reconstituee.
+- A_LN identique au certificat V17.4 (JSON + txt) ; dix ordres elementaires coherents.
+- Cayley-Hamilton p(A) = 0 verifie exactement (Horner).
+- Determinant du mineur verifie par deux methodes (Bareiss, domain-ge) + minor * minor^-1 = I.
+- Concordance numerique V17.3 : validation complementaire, NON une preuve du theoreme.
+- Fichiers anterieurs verifies inchanges apres calcul (voir journal).
+```
