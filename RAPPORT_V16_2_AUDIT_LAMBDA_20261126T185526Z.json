@@ -1,0 +1,277 @@
+{
+  "schema": "DODECA_T2G_V16_2_LAMBDA_RECONCILIATION_AUDIT",
+  "timestamp_utc": "2026-11-26T18:55:26.881820+00:00",
+  "status": "MODULAR_RACCORD_PASS__RATIONAL_RECONSTRUCTION_NOT_CERTIFIED",
+  "scope": "Audit des données archivées uniquement. Aucun nouveau premier collecté. Aucune fraction rationnelle déclarée exacte.",
+  "basis": "beta = D*r, D = leading_coefficient(H)",
+  "D_digits": 111,
+  "exact_polynomials": {
+    "degree_H": 39,
+    "degree_S10": 38,
+    "degree_S11": 38,
+    "gcd_S11_H_degree": 0,
+    "S11_invertible_mod_H_over_Q": true
+  },
+  "crt": {
+    "prime_count": 250,
+    "coordinate_count": 39,
+    "modulus_digits": 1136,
+    "product_matches_stored_modulus": true
+  },
+  "v15c4_modular_checks": [
+    {
+      "prime": 227,
+      "identity_S11_lambda_plus_S10_mod_H": "PASS",
+      "basis_conversion_beta_equals_D_times_r": "PASS",
+      "comparison": "V6_holdout_227",
+      "coordinate_mismatches": 0
+    },
+    {
+      "prime": 397,
+      "identity_S11_lambda_plus_S10_mod_H": "PASS",
+      "basis_conversion_beta_equals_D_times_r": "PASS",
+      "comparison": "V9_CRT",
+      "coordinate_mismatches": 0
+    },
+    {
+      "prime": 523,
+      "identity_S11_lambda_plus_S10_mod_H": "PASS",
+      "basis_conversion_beta_equals_D_times_r": "PASS",
+      "comparison": "V9_CRT",
+      "coordinate_mismatches": 0
+    },
+    {
+      "prime": 569,
+      "identity_S11_lambda_plus_S10_mod_H": "PASS",
+      "basis_conversion_beta_equals_D_times_r": "PASS",
+      "comparison": "V9_CRT",
+      "coordinate_mismatches": 0
+    }
+  ],
+  "v9_old_rational_candidates": {
+    "reconstructed_count": 20,
+    "crt_congruence": "PASS",
+    "holdout_pass_count": {
+      "227": 0,
+      "4057": 0,
+      "4211": 0
+    },
+    "holdout_fail_count": {
+      "227": 20,
+      "4057": 20,
+      "4211": 20
+    },
+    "details": [
+      {
+        "coordinate": 0,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 2,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 3,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 5,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 6,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 8,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 9,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 12,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 17,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 19,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 21,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 23,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 24,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 25,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 26,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 29,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 30,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 33,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 35,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      },
+      {
+        "coordinate": 36,
+        "matches_all_available_CRT_primes": true,
+        "crt_primes_tested": 250,
+        "independent_holdouts": {
+          "227": "FAIL",
+          "4057": "FAIL",
+          "4211": "FAIL"
+        }
+      }
+    ]
+  },
+  "input_sha256": {
+    "resultant": "9f0be9c7e0f1ab226efae0c98fdc64ab5dfa443cb57322d48b03f856ec4e70dc",
+    "s10": "3cd3e0e6e774baeb6b3c8a9cd2b35614c2067632a333e56dd2e56f746dee87d3",
+    "s11": "7dd56565d5f7da288fc79112b35c16269f6383a60ba93234f94d0f3c3231cd69",
+    "v15": "4e497706a13a9c25bca4834e155b3b4fea315d4ac64637341d4a76c61644ad60",
+    "crt": "f6c2cbe661e2bd40ab45f01225b7e00c7265ae2b0e53e0f5eb5eb96a9cb77534",
+    "rr": "3f85c37928c4233c171972199f2488cff148acedaa8d31ac88a0bb1533a2e8a5",
+    "v6": "a145fbd5ce5d6f36c19887c7f7e025c2659c44fb95af4839d36a678210ae788a"
+  },
+  "next_mathematical_step": "Déterminer les 39 coefficients rationnels de -S10/S11 dans Q[r]/(H) par une méthode exacte ou une borne de reconstruction justifiée, puis vérifier les identités exactes. Les candidats V9 qui échouent aux témoins sont rejetés."
+}
